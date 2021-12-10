@@ -88,7 +88,7 @@ public class ArticuloRepository implements I_ArticuloRepository{
     @Override
     public List<Articulo> getAll() {
         List <Articulo> list = new ArrayList();
-        String sqlConsultarV="select * from V_articulos;";
+        String sqlConsultarV="select * from articulos;";
         try (ResultSet rs=conn.createStatement().executeQuery(sqlConsultarV)){
             while(rs.next()){
                 list.add(new Articulo(

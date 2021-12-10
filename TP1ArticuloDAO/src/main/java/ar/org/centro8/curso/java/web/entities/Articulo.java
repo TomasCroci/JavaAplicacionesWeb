@@ -32,7 +32,7 @@ public Articulo() {
         this.comentarios = comentarios;
         this.activo = activo;
     }
- public Articulo(int id, String nombre, String descripcion, TipoArticulo tipoArticulo, EspecieRecomendada especieRecomendada, double costo, double precio, int stock, int stockMinimo, int stockMaximo, String comentario, boolean activo) {
+ public Articulo(int id, String nombre, String descripcion, TipoArticulo tipoArticulo, EspecieRecomendada especieRecomendada, double costo, double precio, int stock, int stockMinimo, int stockMaximo, String comentarios, boolean activo) {
         this.id = id;
         this.nombre = nombre;
         this.descripcion = descripcion;
