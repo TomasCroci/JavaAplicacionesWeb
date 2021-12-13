@@ -78,14 +78,14 @@ public class TP2_ServletCliente {
         System.out.println("****************************************************");
         System.out.println("-- ArticulosAlta 1");
         System.out.println("****************************************************");
-        url=server+"/ArticulosAlta?nombre=CatShow&descripcion=carne&tipo=ALIMENTO&especieRecomendada=FELINO&costo=500&precio=800&stock=10&stockMinimo=5&stockMaximo=20&comentario=null&activo=true";
+        url=server+"/ArticulosAlta?nombre=BaskenPlus&descripcion=MedicamentoParaGatos&tipo=MEDICAMENTO&especieRecomendada=FELINO&costo=200&precio=1000&stock=15&stockMinimo=8&stockMaximo=15&comentario=Oferta&activo=true";
         System.out.println(responseBody(url));
         
         System.out.println("****************************************************");
         System.out.println("-- ArticulosAlta 2");
         System.out.println("****************************************************");
-        url=server+"/ArticulosAlta?nombre=Collar&descripcion=azul&tipo=ACCESORIO&especieRecomendada=FELINO&costo"
-                + "=300&precio=50&stock=10&stockMinimo=5&stockMaximo=20&comentario=null&activo=true";
+        url=server+"/ArticulosAlta?nombre=Sueter&descripcion=SueterParaGatos&tipo=PRENDA&especieRecomendada=FELINO&costo"
+                + "=100&precio=800&stock=20&stockMinimo=10&stockMaximo=30&comentario=null&activo=false";
         System.out.println(responseBody(url));
         
         System.out.println("****************************************************");
@@ -97,7 +97,7 @@ public class TP2_ServletCliente {
         System.out.println("****************************************************");
         System.out.println("-- ArticulosLikeNombre");
         System.out.println("****************************************************");
-        url=server+"/ArticulosLikeNombre?nombre=ca";
+        url=server+"/ArticulosLikeNombre?nombre=su";
         System.out.println(responseBody(url));
         
         System.out.println("****************************************************");
@@ -113,9 +113,9 @@ public class TP2_ServletCliente {
         System.out.println(responseBody(url));
         
         System.out.println("****************************************************");
-        System.out.println("--ArticulosLikeTipo");
+        System.out.println("--ArticulosByTipoArticulo");
         System.out.println("****************************************************");
-        url=server+"/ArticulosLikeTipo?tipo=ACCESORIO";
+        url=server+"/ArticulosByTipoArticulo?tipo=ACCESORIO";
         System.out.println(responseBody(url));
                
         System.out.println("*******************************************");
