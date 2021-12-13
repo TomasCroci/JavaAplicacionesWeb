@@ -29,9 +29,9 @@ public class TestRepository {
         System.out.println("****************************************************"); */
             I_ArticuloRepository ar = new ArticuloRepository(Connector.getConnection());
         ar.save(new Articulo("Basken Plus", "Medicamento para Gatos", TipoArticulo.MEDICAMENTO, EspecieRecomendada.FELINO, 200, 1000, 15, 8, 15, "Oferta!!", true));
-        ar.save(new Articulo("Sueter pequeño para Gato", "Sueter vestir un Gato o Gata", TipoArticulo.PRENDA, EspecieRecomendada.FELINO, 100, 800, 20, 10, 30, " Oferta", false));
-        ar.save(new Articulo("Raton atado a palo", "Raton peluche atado a un palo para Gatos", TipoArticulo.JUGUETE, EspecieRecomendada.FELINO, 200, 1200, 15, 10, 20, "Oferta!!!!", true));
-        ar.save(new Articulo("Goldfish TETRA", "Alimento para peces hecho por TETRA", TipoArticulo.ALIMENTO, EspecieRecomendada.PEZ, 50, 350, 20, 10, 30, " Oferta", false));
+        ar.save(new Articulo("Sueter pequeño para Gato", "Sueter vestir un Gato o Gata", TipoArticulo.PRENDA, EspecieRecomendada.FELINO, 100, 800, 20, 10, 30,null, false));
+        ar.save(new Articulo("Raton atado a palo", "Raton peluche atado a un palo para Gatos", TipoArticulo.JUGUETE, EspecieRecomendada.FELINO, 200, 1200, 15, 10, 20, "5 diferentes colores disponibles!", true));
+        ar.save(new Articulo("Goldfish TETRA", "Alimento para peces hecho por TETRA", TipoArticulo.ALIMENTO, EspecieRecomendada.PEZ, 50, 350, 20, 10, 30, null, false));
         ar.getAll().forEach(System.out::println);
         System.out.println("------------------------------");
         ar.getLikeNombreArticulo("Su").forEach(System.out::println);
@@ -40,7 +40,7 @@ public class TestRepository {
         System.out.println("------------------------------");
         ar.getByActivo(true).forEach(System.out::println);
         System.out.println("------------------------------");
-       
+        
         
     }
 }

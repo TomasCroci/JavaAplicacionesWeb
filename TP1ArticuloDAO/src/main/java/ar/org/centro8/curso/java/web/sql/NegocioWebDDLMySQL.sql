@@ -157,7 +157,6 @@ alter table detalles
 alter table detalles
 	add constraint CK_DetallesPrecioVenta
     check (precioVenta>=0);
-create view V_articulos as
-    SELECT * from articulos;
+
 
 show tables;
