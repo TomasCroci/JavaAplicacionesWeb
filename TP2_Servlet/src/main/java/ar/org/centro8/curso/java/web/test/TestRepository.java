@@ -28,10 +28,10 @@ public class TestRepository {
         cr.getLikeApellido("go").forEach(System.out::println);
         System.out.println("================================="); */
             I_ArticuloRepository ar = new ArticuloRepository(Connector.getConnection());
-        ar.save(new Articulo("Basken Plus", "Medicamento para Gatos", TipoArticulo.MEDICAMENTO, EspecieRecomendada.FELINO, 200, 1000, 15, 8, 15, " ", true));
-        ar.save(new Articulo("Sueter pequeño para Gato", "Sueter vestir un Gato o Gata", TipoArticulo.PRENDA, EspecieRecomendada.FELINO, 100, 800, 20, 10, 30, " ", false));
-        ar.save(new Articulo("Raton atado a palo", "Raton peluche atado a un palo para Gatos", TipoArticulo.JUGUETE, EspecieRecomendada.FELINO, 200, 1200, 15, 10, 20, " ", true));
-        ar.save(new Articulo("Goldfish TETRA", "Alimento para peces hecho por TETRA", TipoArticulo.ALIMENTO, EspecieRecomendada.PEZ, 50, 350, 20, 10, 30, " ", false));
+        ar.save(new Articulo("Basken Plus", "Medicamento para Gatos", TipoArticulo.MEDICAMENTO, EspecieRecomendada.FELINO, 200, 1000, 15, 8, 15, "Oferta! ", true));
+        ar.save(new Articulo("Sueter pequeño para Gato", "Sueter vestir un Gato o Gata", TipoArticulo.PRENDA, EspecieRecomendada.FELINO, 100, 800, 20, 10, 30, null, false));
+        ar.save(new Articulo("Raton atado a palo", "Raton peluche atado a un palo para Gatos", TipoArticulo.JUGUETE, EspecieRecomendada.FELINO, 200, 1200, 15, 10, 20, "5 diferentes colores disponibles! ", true));
+        ar.save(new Articulo("Goldfish TETRA", "Alimento para peces hecho por TETRA", TipoArticulo.ALIMENTO, EspecieRecomendada.PEZ, 50, 350, 20, 10, 30,null, false));
         ar.getAll().forEach(System.out::println);
         System.out.println("=================================");
         ar.getLikeNombreArticulo("Su").forEach(System.out::println);
@@ -42,14 +42,47 @@ public class TestRepository {
         System.out.println("=================================");
         
         
-          ar.remove(ar.getById(1));
+          ar.remove(ar.getById(5));
+          ar.remove(ar.getById(6));
+          ar.remove(ar.getById(8));
+          ar.remove(ar.getById(9));
+          ar.remove(ar.getById(10));
+          ar.remove(ar.getById(11));
+          ar.remove(ar.getById(12));
+          ar.remove(ar.getById(13));
+          ar.remove(ar.getById(14));
+          ar.remove(ar.getById(15));
+          ar.remove(ar.getById(16));
+          ar.remove(ar.getById(17));
+          ar.remove(ar.getById(18));
+          ar.remove(ar.getById(19));
+          ar.remove(ar.getById(20));
+          ar.remove(ar.getById(21));
+          ar.remove(ar.getById(22));
+          ar.remove(ar.getById(23));
+          ar.remove(ar.getById(24));
+          ar.remove(ar.getById(27));
+          ar.remove(ar.getById(29));
+          ar.remove(ar.getById(37));
+          ar.remove(ar.getById(38));
+          ar.remove(ar.getById(39));
+          ar.remove(ar.getById(40));
+          ar.remove(ar.getById(49));
+          ar.remove(ar.getById(50));
+          ar.remove(ar.getById(51));
+          ar.remove(ar.getById(52));
+          ar.remove(ar.getById(53));
+          ar.remove(ar.getById(54));
+          ar.remove(ar.getById(55));
+          ar.remove(ar.getById(56));
+          ar.remove(ar.getById(57));
        
-         Articulo a=ar.getById(4);
-        a.setActivo(true);
-        ar.update(a);
-        System.out.println("=================================");
-        System.out.println("Consulta por nombre");
-        ar.getLikeNombreArticulo("Goldfish").forEach(System.out::println);
-        
+//         Articulo a=ar.getById(4);
+//        a.setActivo(true);
+//        ar.update(a);
+//        System.out.println("=================================");
+//        System.out.println("Consulta por nombre");
+//        ar.getLikeNombreArticulo("Goldfish").forEach(System.out::println);
+//        
     }
 }
