@@ -16,7 +16,7 @@ public class TP2_ServletCliente {
 
     public static void main(String[] args) throws Exception{
         
-        String server="http://localhost:8080/server";
+        String server="http://localhost:8089/server";
         String url;  
         
         
@@ -120,10 +120,7 @@ public class TP2_ServletCliente {
                
         System.out.println("*******************************************");
         System.out.println("*******************************************");
-        url=server+"/ArticulosAll";
-        Type listTypeArt=new TypeToken<List<Articulo>>(){}.getType();
-        List<Articulo>listAr= new Gson().fromJson(responseBody(url),listTypeArt);
-        listAr.forEach(System.out::println);
+        
     }
     
     private static String responseBody(String url) throws InterruptedException, IOException {
